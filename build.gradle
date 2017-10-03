@@ -1,0 +1,27 @@
+apply plugin: 'java'
+
+version = '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+    }
+
+    test {
+        java {
+            srcDir 'test'
+        }
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile 'org.hamcrest:hamcrest-core:1.3'
+}
